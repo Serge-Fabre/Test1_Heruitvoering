@@ -1,0 +1,47 @@
+﻿<Window x:Class="Test1_Heruitvoering.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test1_Heruitvoering"
+        mc:Ignorable="d"
+        Title="Serge Fabre" Height="350" Width="500">
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Bestand">
+                <MenuItem Header="_Afsluiten" Click="AfsluitenMenuItem_Click"/>
+
+            </MenuItem>
+            <MenuItem Header="_Pakbonnen">
+                <MenuItem Header="_Importeeren" Click="ImporterenMenuItem_Click" Name="MIImporteren"/>
+                <MenuItem Header="_Exporteren" Click="ExporterenMenuItem_Click" Name="MIExporteren"/>
+
+            </MenuItem>
+        </Menu>
+
+
+        <Canvas>
+            <Label x:Name="lblBestandslijst" Content="Bestandslijst" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <ListBox x:Name="lstBestandslijst" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="197" Canvas.Left="10" Canvas.Top="36" SelectionChanged="LstBestandslijst_SelectionChanged"/>
+            <Label x:Name="lblInhoudBestand" Content="Inhoud Bestand" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="141"/>
+            <TextBox x:Name="txtInhoudBestand" HorizontalAlignment="Left" Height="76" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" Canvas.Left="10" Canvas.Top="171"/>
+
+            <TabControl x:Name="tabControl" Height="211" Canvas.Left="224" Canvas.Top="35" Width="200">
+                <TabItem Header="Boeken.txt" Width="70">
+                    <TextBox>
+
+                    </TextBox>
+                </TabItem>
+                <TabItem Header="Strips.txt" Width="80">
+                    <TextBox>
+
+                    </TextBox>
+                </TabItem>
+            </TabControl>
+            <Label x:Name="lblVerwerking" Content="Verwerking" Canvas.Left="246" Canvas.Top="10"/>
+            <Button x:Name="btnVerwerk" Content="verwerk&gt;&gt;" Canvas.Left="132" Canvas.Top="252" Width="75"/>
+
+
+        </Canvas>
+    </DockPanel>
+</Window>
