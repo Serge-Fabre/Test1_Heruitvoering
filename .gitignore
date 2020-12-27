@@ -261,4 +261,4 @@ __pycache__/
 *.pyc
 
 # Adding a folder named Test
-Test
+Test/
