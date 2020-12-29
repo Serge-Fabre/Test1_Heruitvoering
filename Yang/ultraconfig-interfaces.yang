@@ -1,0 +1,27 @@
+list interface {
+  key "name";
+  leaf name {
+    type string;
+    mandatory "true";
+    description
+      "Interface name. Example value: GigabitEthernet 0/0/0";
+  }
+  leaf address {
+    type dotted-quad;
+    mandatory "true";
+    description
+      "Interface IP address. Example value: 10.10.10.1";
+  }
+  leaf subnet-mask {
+    type dotted-quad;
+    mandatory "true";
+    description
+      "Interface subnet mask. Example value: 255.255.255.0";
+  }
+  leaf enabled {
+    type boolean;
+    default "false";
+    description
+      "Enable or disable the interface. Example value: true";
+  }
+}
